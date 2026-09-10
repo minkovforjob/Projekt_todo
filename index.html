@@ -9,7 +9,65 @@
 </head>
 
 <body>
-    <button>make a request</button>
+    <div class="workSpace">
+        <div class="mainConteiner">
+            <div class="currentDate">
+                <h4>Среда</h4>
+                <p>9 Sep</p>
+            </div>
+            <div class="find">
+                <input class="findInput" type="text" placeholder="Поиск">
+                <button class="findBtn">
+                    <img src="/assets/icons/find.svg" alt="Поиск">
+                </button>
+            </div>
+            <div class="tabs">
+                <button id="tabAll">
+                    <span class="check">✓</span>
+                    Все
+                </button>
+
+                <button id="tabActive">
+                    Активные
+                </button>
+
+                <button id="tabEnded">
+                    Завершенные
+                </button>
+            </div>
+            <ul id="taskList">
+                <li>
+                    <input type="checkbox">
+                    <div class="task">
+                        <span class="task-date">10 сентября 2026</span>
+                        <span class="task-name">Выучить CSS Grid</span>
+
+                    </div>
+                </li>
+            </ul>
+
+
+
+        </div>
+
+        <form class="formAddTask" action="formAddTask">
+            <h2>Авторизация</h2>
+            <input class="inpBox" type="text" placeholder="Описание" name="v_login">
+            <input class="datetime" type="datetime" placeholder="Дата и время" name="v_password">
+
+            <label class="switch">
+                <span class="slider">Напомнить мне</span>
+                <input type="checkbox">
+
+            </label>
+            <div>
+                <input class="addBut" type="submit" value="Войти">
+                <input class="cancelBut" type="reset" value="Очистить поля">
+            </div>
+
+
+        </form>
+    </div>
 
 </body>
 <script src="/scripts/script.js"></script>
