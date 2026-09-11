@@ -47,13 +47,13 @@
             </ul>
 
 
-
+            <button id="pencilBtn"><img src="assets/icons/pencil.svg" alt="Добавить"></button>
         </div>
 
         <form class="formAddTask" action="formAddTask">
             <div class="onlyLine"><img src="/assets/icons/Frame 17.svg" alt=""></div>
-            <input class="inpBox" type="text" placeholder="Описание" name="v_login">
-            <input class="datetime" type="datetime" placeholder="Дата и время" name="v_password">
+            <input class="inpBox" type="text" placeholder="Описание" name="textTask">
+            <input class="datetime" type="datetime" placeholder="Дата и время" name="dateTimeTask">
             <div class="switchCont">
                 <span>Напомнить мне</span>
                 <label class="switch">
@@ -61,12 +61,10 @@
                     <span class="slider"></span>
                 </label>
             </div>
-            <div>
-                <input class="addTaskBtn" type="submit" value="Добавить">
-                <input class="cancelBtn" type="reset" value="Отмена">
+            <div class="contForBtn">
+                <input id="addTaskBtn" type="submit" value="Добавить">
+                <input id="cancelBtn" type="reset" value="Отмена">
             </div>
-
-
         </form>
     </div>
 
