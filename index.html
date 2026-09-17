@@ -22,38 +22,41 @@
                 </button>
             </div>
             <div class="tabs">
-                <button id="tabAll">
-                    <span class="check">✓</span>
+                <button class="filtred" id="tabAll">
+                    <span id="spanAll">✓</span>
                     Все
                 </button>
 
                 <button id="tabActive">
+                    <span id="spanActive"></span>
                     Активные
                 </button>
 
                 <button id="tabEnded">
+                    <span id="spanEnded"></span>
                     Завершенные
                 </button>
             </div>
             <ul id="taskList">
-                <li>
+                <!-- <li class="oneTask">
                     <input type="checkbox">
-                    <div class="task">
-                        <span class="task-date">10 сентября 2026</span>
-                        <span class="task-name">Выучить CSS Grid</span>
-
+                    <div class="taskInfo">
+                        <span class="taskDate">10 сентября 2026</span>
+                        <span class="taskName">Выучить CSS Grid</span>
                     </div>
-                </li>
+                </li> -->
             </ul>
 
 
-            <button id="pencilBtn"><img src="assets/icons/pencil.svg" alt="Добавить"></button>
-        </div>
 
-        <form class="formAddTask" action="formAddTask">
+        </div>
+        <button id="pencilBtn"><img src="assets/icons/pencil.svg" alt="Добавить"></button>
+        <form class="formAddTask hidden" action="formAddTask">
             <div class="onlyLine"><img src="/assets/icons/Frame 17.svg" alt=""></div>
-            <input class="inpBox" type="text" placeholder="Описание" name="textTask">
-            <input class="datetime" type="datetime" placeholder="Дата и время" name="dateTimeTask">
+            <input class="textTask" type="text" placeholder="Описание" name="textTask">
+            <input class="dateTimeTask" type="datetime-local" placeholder="Дата и время" name="dateTimeTask">
+            <p class="OKMassage" id="textStatusMessage"></p>
+
             <div class="switchCont">
                 <span>Напомнить мне</span>
                 <label class="switch">
@@ -65,6 +68,7 @@
                 <input id="addTaskBtn" type="submit" value="Добавить">
                 <input id="cancelBtn" type="reset" value="Отмена">
             </div>
+
         </form>
     </div>
 
