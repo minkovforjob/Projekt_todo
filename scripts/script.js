@@ -53,12 +53,21 @@ updateVisualTaskList(tasks);
 //     checked: false
 // };
 
-tasks.indexOf
+
 function delTask(idTask) {
-    tasks.for
-    // tasks.splice(i, 1);
-
-
+    console.log("idTask = " + idTask);
+    let ind = -1;
+    console.log(tasks.length);
+    for (let i = 0; i < tasks.length - 1; i++) {
+        if (idTask == tasks[i].id) {
+            console.log(tasks[i]);
+            ind = i; break;
+        }
+    };
+    console.log(ind);
+    tasks.splice(ind, 1);
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    updateVisualTaskList(tasks);
 }
 
 function updateVisualTaskList(listOfTasks) {
