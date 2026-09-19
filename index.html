@@ -12,12 +12,12 @@
     <div class="workSpace">
         <div class="mainConteiner">
             <div class="currentDate">
-                <h4>Среда</h4>
-                <p>9 Sep</p>
+                <h4 id="currentWeekDay">Среда</h4>
+                <p id="currentDateMonthYear">9 Sep</p>
             </div>
             <div class="find">
-                <input class="findInput" type="text" placeholder="Поиск">
-                <button class="findBtn">
+                <input id="findInput" type="text" placeholder="Поиск">
+                <button id="findBtn">
                     <img src="/assets/icons/find.svg" alt="Поиск">
                 </button>
             </div>
@@ -44,6 +44,7 @@
                         <span class="taskDate">10 сентября 2026</span>
                         <span class="taskName">Выучить CSS Grid</span>
                     </div>
+                    <button class="delTask">-</button>
                 </li> -->
             </ul>
 
@@ -51,7 +52,8 @@
 
         </div>
         <button id="pencilBtn"><img src="assets/icons/pencil.svg" alt="Добавить"></button>
-        <form class="formAddTask hidden" action="formAddTask">
+        <!-- action="formAddTask" -->
+        <form class="formAddTask hidden">
             <div class="onlyLine"><img src="/assets/icons/Frame 17.svg" alt=""></div>
             <input class="textTask" type="text" placeholder="Описание" name="textTask">
             <input class="dateTimeTask" type="datetime-local" placeholder="Дата и время" name="dateTimeTask">

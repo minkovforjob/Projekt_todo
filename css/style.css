@@ -5,8 +5,8 @@
 }
 
 @font-face {
-    font-family: "Roboto Flex";
-    src: url("/assets/fonts/Roboto_Flex/RobotoFlex-VariableFont_GRAD\,XOPQ\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf");
+    font-family: "Open Sans";
+    src: url("/assets/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf");
 }
 
 .workSpace {
@@ -17,7 +17,7 @@
     border-radius: 8px;
     position: relative;
 
-    font-family: "Roboto Flex";
+    font-family: "Open Sans";
 }
 
 .mainConteiner {
@@ -41,7 +41,7 @@
 
 }
 
-.findInput {
+#findInput {
     width: 100%;
     border-radius: 100px 0 0 100px;
     border: 0;
@@ -54,7 +54,7 @@
     background-color: #E6E2E9;
 }
 
-.findBtn {
+#findBtn {
     width: 48px;
     height: 48px;
     border: 0;
@@ -129,7 +129,10 @@
 }
 
 
-
+.checked {
+    color: gray;
+    text-decoration: line-through;
+}
 
 li {
     margin-top: 12px;
@@ -153,16 +156,25 @@ li {
     .taskInfo {
         display: flex;
         flex-direction: column;
+        flex-grow: 1;
     }
 
     .taskName {
         font-size: 16px;
+        flex-grow: 1;
     }
 
     .taskDate {
         font-size: 14px;
         color: gray;
         margin-top: 5px;
+    }
+
+    .delTask {
+        width: 13px;
+        height: 13px;
+        margin-right: 13px;
+        color: black;
     }
 }
 
