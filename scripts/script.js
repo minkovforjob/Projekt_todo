@@ -84,7 +84,18 @@ function updateVisualTaskList(listOfTasks) {
         taskText.textContent = task.textTask;
         const taskDate = document.createElement("span");
         taskDate.setAttribute("class", "taskDate");
-        taskDate.textContent = task.dateTimeTask;
+
+        const date = new Date(task.dateTimeTask);
+
+        const formatDate = date.toLocaleString("ru-RU", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+            hour: "2-digit",
+            minute: "2-digit"
+        });
+        // taskDate.textContent = task.dateTimeTask;
+        taskDate.textContent = formatDate;
 
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
@@ -253,8 +264,11 @@ formAddTask.addEventListener("submit", (event) => {
 
 });
 
-// const oneTask = document.querySelector(".oneTask");
+
+
 // //  ************          edit task
+// const oneTask = document.querySelector(".oneTask");
+
 // oneTask.addEventListener("dblclick", (event) => {
 //     formAddTask.classList.remove("hidden");
 //     textStatusMessage.textContent = "";
